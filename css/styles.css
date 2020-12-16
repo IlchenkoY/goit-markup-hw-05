@@ -590,6 +590,15 @@ address {
   opacity: 1;
   transition: opacity 250ms var(--timing-function);
 }
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.1);
+}
 .modal {
   position: absolute;
   top: 50%;
@@ -602,17 +611,8 @@ address {
   border-radius: 4px;
 
   transform: translate(-50%, -50%) scale(1);
-  transition: 2500ms var(--timing-function);
+  transition: 250ms var(--timing-function);
 }
-.backdrop.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.9);
-}
-
 .modal-button {
   position: absolute;
   top: 8px;
